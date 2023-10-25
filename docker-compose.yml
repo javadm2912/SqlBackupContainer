@@ -1,0 +1,21 @@
+version: "3.7"
+services:
+  ubuntu:
+    container_name: backup-service
+    image: backup-service:latest
+    restart: always
+    tty: true
+    volumes:
+      - /home/sql-backups/:/home/backups/
+      - /home/sql-data/:/home/sqldata/
+    networks:
+      services-network:
+        ipv4_address: 172.23.0.2
+
+networks:
+  services-network:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 172.23.0.0/16
+          gateway: 172.23.0.1
