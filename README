@@ -7,5 +7,5 @@ After create docker image from dockerfile run docker compose for create containe
 > sudo docker compose up -d
 
 -----------------------------------------------------------------------------------
-IMPORTANT: Check sql data in docker compose and mout this to yoar sql container
-IMPORTANT: Dont forget add system network to sql container
+IMPORTANT: Check SQL data path in docker compose and mount this to your SQL container
+IMPORTANT: Dont forget add system network to SQL container
