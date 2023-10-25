@@ -1,0 +1,11 @@
+First run following line for create docker image
+
+> sudo docker build -t backup-service .
+
+After create docker image from dockerfile run docker compose for create container
+
+> sudo docker compose up -d
+
+-----------------------------------------------------------------------------------
+IMPORTANT: Check sql data in docker compose and mout this to yoar sql container
+IMPORTANT: Dont forget add system network to sql container

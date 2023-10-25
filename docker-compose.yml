@@ -7,6 +7,7 @@ services:
     tty: true
     volumes:
       - /home/sql-backups/:/home/backups/
+      #mount your sql data to this volume
       - /home/sql-data/:/home/sqldata/
     networks:
       services-network:
@@ -19,3 +20,5 @@ networks:
       config:
         - subnet: 172.23.0.0/16
           gateway: 172.23.0.1
+
+#add system network to sql container
